@@ -1,0 +1,157 @@
+{
+  "extracted_from_commit": "cab2ed44393208b708c1242399c52dfeb4763556",
+  "source_date": "2026-09-29",
+  "published_snapshot_date": "2026-10-12",
+  "scope": "numerical worker, original tests, public samples and selected evaluation records",
+  "changes": "standalone commands and product documentation; baseline docstring corrected to point to known preparation issues; numerical behavior preserved",
+  "files": [
+    {
+      "path": "forecast_worker/__init__.py",
+      "sha256": "e538917616010640372e591a638a6e421efd5ad6135ca4959aa59d43642af2ce"
+    },
+    {
+      "path": "forecast_worker/baseline.py",
+      "sha256": "87b2fab1ae70cd86a748bc879bc8ccec98cd1b55d497b3b7d63f5181f5851755"
+    },
+    {
+      "path": "forecast_worker/benchmarks/__init__.py",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "forecast_worker/benchmarks/fault_pack.py",
+      "sha256": "c5aed66ea51a76a85d7fb8a901335db8b318f9bb17fc836e3e53f3c69ea752c0"
+    },
+    {
+      "path": "forecast_worker/benchmarks/retail_planning_synthetic.py",
+      "sha256": "82fb270c37491a6f3b471dd6dc9674548d4346c9ab2456defdeac3b4f5a52665"
+    },
+    {
+      "path": "forecast_worker/benchmarks/smard_consumption.py",
+      "sha256": "f19a392349e3717daaea8f15387d8cc22ddf3c385ddb1228c03c54c959116deb"
+    },
+    {
+      "path": "forecast_worker/benchmarks/uci_bike_sharing.py",
+      "sha256": "f59b4c3bf848baa36949f76f19f7c428b590967bd552c373fe6e2ebd9b13f766"
+    },
+    {
+      "path": "forecast_worker/benchmarks/uci_online_retail_ii.py",
+      "sha256": "b8964e965bf041ac5b65e99c7e173a4f8cf723d6c3eccd1046637405f603a514"
+    },
+    {
+      "path": "forecast_worker/calendar.py",
+      "sha256": "936a06318ec509ed6de8be74a6990193ac42a3b891533f240b4c974499e41ee1"
+    },
+    {
+      "path": "forecast_worker/context/__init__.py",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "forecast_worker/context/experiment.py",
+      "sha256": "853d67165b52d974c5f0b210b8ee17191c8c70006a27649c763d74b0654f3caa"
+    },
+    {
+      "path": "forecast_worker/context/features.py",
+      "sha256": "097bb88866f70fd19e95b4c9ca5fc807e49b3770c398ec6053653f023f9bf8c3"
+    },
+    {
+      "path": "forecast_worker/context/fixture.py",
+      "sha256": "3a4b480ce5ef46259d85f21a4300836bb454f707fa245328769161890a2dc4c4"
+    },
+    {
+      "path": "forecast_worker/context/job.py",
+      "sha256": "31fa479078f995fe1db9a7b75b2d698d495ce3637602d2bc332b1a586bb61d55"
+    },
+    {
+      "path": "forecast_worker/context/parse.py",
+      "sha256": "9f3b3c605986ca407374b41ee08c3de210a62b3e8327b9b9c59e1b277c71ef0a"
+    },
+    {
+      "path": "forecast_worker/evaluate.py",
+      "sha256": "29ac57241383edff4b48de97e26444323a64c5fe0b8f8715da60ff3e1703f028"
+    },
+    {
+      "path": "forecast_worker/fixtures/__init__.py",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "forecast_worker/fixtures/nordwerk.py",
+      "sha256": "b278bc9956436ebf0cc35cda545bbde7aa494a299b0a45fe811ea1571dfee38a"
+    },
+    {
+      "path": "forecast_worker/ingest.py",
+      "sha256": "b2c213483b417e31e4d8ca376c2be13d21eb499fd27122ec0690d7b62ea165f4"
+    },
+    {
+      "path": "forecast_worker/interval_study.py",
+      "sha256": "92e5d5e52ff091a951329b13ed96318f5f8d953995218fbf90687f233e3c8681"
+    },
+    {
+      "path": "forecast_worker/interval_study2.py",
+      "sha256": "011a0f6b8d03e2cabea0c4a7d65e51f7d48bcdadab8511bf87a59b2c445ccc11"
+    },
+    {
+      "path": "forecast_worker/intervals.py",
+      "sha256": "d780e59972820ccf32db02acd144766bfe5d209f48659d366ce8a50258a2b8dd"
+    },
+    {
+      "path": "forecast_worker/mapping.py",
+      "sha256": "b93b5f5f5ed6e4ecfcdaccbe7e136d2454f0b6e422075fe24e88a9858e0693cc"
+    },
+    {
+      "path": "forecast_worker/operate.py",
+      "sha256": "81737dbb1ca4623c62210fdae8c7c9b394942c9f61553c61363857e00ebf963c"
+    },
+    {
+      "path": "forecast_worker/planning.py",
+      "sha256": "9d19a28e781e7d7a9eea711fd93893495b3aefb6515f2c0d15a88e5eae6d9584"
+    },
+    {
+      "path": "forecast_worker/profile.py",
+      "sha256": "a9070ea12585e707834e337cc048f11f7a0f58b7039948561396b66b5c9592f6"
+    },
+    {
+      "path": "forecast_worker/run.py",
+      "sha256": "40c19f1187102481492be635a5eafe862e0e3c0a544e8978d0bef4ad95dcd38f"
+    },
+    {
+      "path": "forecast_worker/signals.py",
+      "sha256": "f86d51ee7bbd446e3a6f73e6dd4006af5c2e3350a9569ab7458d61158f854135"
+    },
+    {
+      "path": "forecast_worker/tests/__init__.py",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "forecast_worker/tests/test_context.py",
+      "sha256": "3d7b136a33755222b8ffe825cafd45678a7e22a21e78e8a05093d44d2e451f79"
+    },
+    {
+      "path": "forecast_worker/tests/test_evaluate.py",
+      "sha256": "c683eef6a6e0023fba05a41e331d11a506555388d0298c2a880e1a7ff08c36eb"
+    },
+    {
+      "path": "forecast_worker/tests/test_ingest.py",
+      "sha256": "f7c9e3c3f210ace99a80613c9648c8378ff55d60f4bd429051d64d8d866ff244"
+    },
+    {
+      "path": "forecast_worker/tests/test_mapping.py",
+      "sha256": "4159a0dc200f47d369fdd6a9db911505dfc70f82f6de40c40569fe6595183612"
+    },
+    {
+      "path": "forecast_worker/tests/test_numbers.py",
+      "sha256": "33c0971e3ab00a6a499b7a6cfe738d8b23ef119430f06524e91afd22b0fd8cd4"
+    },
+    {
+      "path": "forecast_worker/tests/test_planning.py",
+      "sha256": "73c87e239d6a9401fc1b63de56bb68e72411a67130fa451a401675cc681a84fa"
+    },
+    {
+      "path": "forecast_worker/tests/test_public_data.py",
+      "sha256": "7586ff4b724203f62147e470e5966c2cf439f3e1fbd632bc71706b28b2cff94d"
+    },
+    {
+      "path": "forecast_worker/tests/test_scenario.py",
+      "sha256": "011d33ff5e935a1fbc75203b732705c39c02765984ab9df70aedae09e05cab7a"
+    }
+  ]
+}

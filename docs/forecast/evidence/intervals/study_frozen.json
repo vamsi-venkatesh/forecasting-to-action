@@ -1,0 +1,26 @@
+{
+ "study": {
+  "version": "interval-study-1",
+  "level": 80,
+  "methods": [
+   "conformal_w3",
+   "pooled_w10",
+   "pooled_w20"
+  ],
+  "development": {
+   "nordwerk_a": "NordWerk Demo fixture seed 20260928: the 12 rolling cross-validation origins only; its holdout (already seen: 64.2%) is excluded",
+   "uci_retail": "UCI Online Retail II weekly v2 (50 products chosen on training-period data): the 12 rolling cross-validation origins only; its holdout is kept for the public-data evaluation"
+  },
+  "test": {
+   "nordwerk_b": "a NEW NordWerk realisation, seed 20261015 (synthetic): all cross-validation and holdout origins",
+   "bike_daily": "UCI Bike Sharing daily total rentals (real): all cross-validation and holdout origins; never evaluated before"
+  },
+  "selection": "among methods whose development coverage is within 0.75..0.85 on BOTH development datasets, the lowest mean scaled interval score (mean of the two datasets); if none qualifies, NO method is selected and intervals stay unvalidated",
+  "validation": "the selected method is 'validated on these datasets' only if its test coverage is within 0.75..0.85 on BOTH test datasets; otherwise intervals are labelled not validated and nothing may rely on them",
+  "interval_score": "Gneiting-Raftery interval score: (hi - lo) + (2/alpha)(lo - y)+ + (2/alpha)(y - hi)+, alpha = 0.2, divided by the series scale (in-sample one-step naive MAE on data before the evaluation window)",
+  "not_allowed": "no change of rules, methods, datasets or thresholds after seeing development or test results"
+ },
+ "sha256": "c024221ad7351866606eaccc1819560c6b917672d5114b47ede7c441c2722fb2",
+ "frozen_at": "2026-09-28T14:43:02.057431+00:00"
+}
+

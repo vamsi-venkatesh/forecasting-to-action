@@ -1,0 +1,130 @@
+{
+ "study_sha256": "c024221ad7351866606eaccc1819560c6b917672d5114b47ede7c441c2722fb2",
+ "development": {
+  "nordwerk_a": {
+   "frequency": "weekly",
+   "horizon": 4,
+   "gap": 1,
+   "evaluation_until": "2026-07-27",
+   "results": {
+    "conformal_w3": {
+     "n": 572,
+     "series": 12,
+     "origins": 12,
+     "coverage": 0.7273,
+     "mean_scaled_width": 2.1738,
+     "mean_scaled_interval_score": 4.397,
+     "point_mase": 0.7147,
+     "coverage_by_horizon": {
+      "1": 0.6993,
+      "2": 0.7483,
+      "3": 0.7273,
+      "4": 0.7343
+     },
+     "seconds": 2.6
+    },
+    "pooled_w10": {
+     "n": 572,
+     "series": 12,
+     "origins": 12,
+     "coverage": 0.8357,
+     "mean_scaled_width": 2.3962,
+     "mean_scaled_interval_score": 3.8103,
+     "point_mase": 0.7147,
+     "coverage_by_horizon": {
+      "1": 0.8392,
+      "2": 0.8182,
+      "3": 0.8462,
+      "4": 0.8392
+     },
+     "seconds": 4.2
+    },
+    "pooled_w20": {
+     "n": 572,
+     "series": 12,
+     "origins": 12,
+     "coverage": 0.8601,
+     "mean_scaled_width": 2.6295,
+     "mean_scaled_interval_score": 3.8662,
+     "point_mase": 0.7147,
+     "coverage_by_horizon": {
+      "1": 0.8392,
+      "2": 0.8392,
+      "3": 0.8881,
+      "4": 0.8741
+     },
+     "seconds": 9.8
+    }
+   }
+  },
+  "uci_retail": {
+   "frequency": "weekly",
+   "horizon": 4,
+   "gap": 1,
+   "evaluation_until": "2011-10-03",
+   "results": {
+    "conformal_w3": {
+     "n": 2368,
+     "series": 50,
+     "origins": 12,
+     "coverage": 0.6816,
+     "mean_scaled_width": 2.4464,
+     "mean_scaled_interval_score": 4.8212,
+     "point_mase": 0.9171,
+     "coverage_by_horizon": {
+      "1": 0.7078,
+      "2": 0.6791,
+      "3": 0.6723,
+      "4": 0.6672
+     },
+     "seconds": 1.5
+    },
+    "pooled_w10": {
+     "n": 2368,
+     "series": 50,
+     "origins": 12,
+     "coverage": 0.8015,
+     "mean_scaled_width": 2.6813,
+     "mean_scaled_interval_score": 4.4743,
+     "point_mase": 0.9171,
+     "coverage_by_horizon": {
+      "1": 0.8159,
+      "2": 0.8074,
+      "3": 0.799,
+      "4": 0.7838
+     },
+     "seconds": 5.6
+    },
+    "pooled_w20": {
+     "n": 2368,
+     "series": 50,
+     "origins": 12,
+     "coverage": 0.8222,
+     "mean_scaled_width": 2.8153,
+     "mean_scaled_interval_score": 4.4592,
+     "point_mase": 0.9171,
+     "coverage_by_horizon": {
+      "1": 0.826,
+      "2": 0.8378,
+      "3": 0.8091,
+      "4": 0.8159
+     },
+     "seconds": 10.1
+    }
+   }
+  }
+ },
+ "decision": {
+  "selected": "pooled_w10",
+  "qualified": [
+   "pooled_w10"
+  ],
+  "mean_scaled_interval_score": {
+   "pooled_w10": 4.1423
+  },
+  "reason": "pooled_w10: lowest mean scaled interval score among methods covering 75-85% on both development sets"
+ },
+ "decided_at": "2026-09-28T14:43:44.730543+00:00",
+ "decision_sha256": "3429e04bdeef611d402d2e2267129e14c0c98e5e1a2a04f42134965d2eed09ed"
+}
+

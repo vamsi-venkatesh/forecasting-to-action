@@ -1,0 +1,491 @@
+{
+  "population": {
+    "origins": [
+      "2012-11-14",
+      "2012-11-15",
+      "2012-11-16",
+      "2012-11-17",
+      "2012-11-18",
+      "2012-11-19",
+      "2012-11-20",
+      "2012-11-21",
+      "2012-11-22",
+      "2012-11-23",
+      "2012-11-24",
+      "2012-11-25"
+    ],
+    "holdout_from": "2012-12-04",
+    "holdout_origins": [
+      "2012-12-02",
+      "2012-12-09",
+      "2012-12-16",
+      "2012-12-23"
+    ],
+    "series": [
+      "bike-rentals|total"
+    ],
+    "horizon_weeks": 7,
+    "gap_weeks": 1,
+    "interval_level": 80,
+    "missing_policy": "zero",
+    "quantity_columns": {
+      "rentals": "rentals"
+    },
+    "imputed_weeks": 0,
+    "stockout_weeks": 0,
+    "measured_lag_days": 0.25,
+    "measured_gap": 1,
+    "frequency": "daily",
+    "interval_method": "pooled_w10"
+  },
+  "cross_validation": {
+    "comparable_population": {
+      "points": 84,
+      "series": [
+        "bike-rentals|total"
+      ]
+    },
+    "comparable": {
+      "ets": {
+        "n": 84,
+        "mae": 1344.7884,
+        "bias": 952.2984,
+        "mase": 1.8496,
+        "coverage": 0.619,
+        "mean_width": 3154.4284
+      },
+      "lgbm_lags": {
+        "n": 84,
+        "mae": 1446.8111,
+        "bias": 602.4305,
+        "mase": 1.99,
+        "coverage": 0.5476,
+        "mean_width": 2627.1545
+      },
+      "naive": {
+        "n": 84,
+        "mae": 1652.1429,
+        "bias": 181.2619,
+        "mase": 2.2724,
+        "coverage": 0.8333,
+        "mean_width": 5949.1015
+      },
+      "seasonal_naive_7": {
+        "n": 84,
+        "mae": 1649.1429,
+        "bias": 841.4286,
+        "mase": 2.2682,
+        "coverage": 0.4524,
+        "mean_width": 3520.0928
+      }
+    },
+    "per_model": {
+      "ets": {
+        "overall": {
+          "n": 84,
+          "mae": 1344.7884,
+          "bias": 952.2984,
+          "mase": 1.8496,
+          "coverage": 0.619,
+          "mean_width": 3154.4284
+        },
+        "by_horizon": {
+          "1": {
+            "n": 12,
+            "mae": 1028.3967,
+            "bias": 881.9033,
+            "mase": 1.4145,
+            "coverage": 0.6667,
+            "mean_width": 2986.083
+          },
+          "2": {
+            "n": 12,
+            "mae": 1190.6797,
+            "bias": 934.0588,
+            "mase": 1.6377,
+            "coverage": 0.5833,
+            "mean_width": 3043.1759
+          },
+          "3": {
+            "n": 12,
+            "mae": 1354.4623,
+            "bias": 975.2143,
+            "mase": 1.8629,
+            "coverage": 0.5833,
+            "mean_width": 3099.6485
+          },
+          "4": {
+            "n": 12,
+            "mae": 1406.4724,
+            "bias": 907.6198,
+            "mase": 1.9345,
+            "coverage": 0.5833,
+            "mean_width": 3155.5361
+          },
+          "5": {
+            "n": 12,
+            "mae": 1465.0706,
+            "bias": 948.942,
+            "mase": 2.0151,
+            "coverage": 0.6667,
+            "mean_width": 3210.871
+          },
+          "6": {
+            "n": 12,
+            "mae": 1450.8636,
+            "bias": 1046.6809,
+            "mase": 1.9955,
+            "coverage": 0.6667,
+            "mean_width": 3265.6833
+          },
+          "7": {
+            "n": 12,
+            "mae": 1517.5732,
+            "bias": 971.6697,
+            "mase": 2.0873,
+            "coverage": 0.5833,
+            "mean_width": 3320.0007
+          }
+        },
+        "by_series": {
+          "bike-rentals|total": {
+            "n": 84,
+            "mae": 1344.7884,
+            "bias": 952.2984,
+            "mase": 1.8496,
+            "coverage": 0.619,
+            "mean_width": 3154.4284
+          }
+        },
+        "stockout_weeks": {
+          "n": 0,
+          "mae": null,
+          "bias": null,
+          "mase": null,
+          "coverage": null,
+          "mean_width": null
+        }
+      },
+      "lgbm_lags": {
+        "overall": {
+          "n": 84,
+          "mae": 1446.8111,
+          "bias": 602.4305,
+          "mase": 1.99,
+          "coverage": 0.5476,
+          "mean_width": 2627.1545
+        },
+        "by_horizon": {
+          "1": {
+            "n": 12,
+            "mae": 1037.7155,
+            "bias": 507.6307,
+            "mase": 1.4273,
+            "coverage": 0.75,
+            "mean_width": 2552.1231
+          },
+          "2": {
+            "n": 12,
+            "mae": 1056.2095,
+            "bias": 541.5518,
+            "mase": 1.4527,
+            "coverage": 0.6667,
+            "mean_width": 2712.9776
+          },
+          "3": {
+            "n": 12,
+            "mae": 1394.6113,
+            "bias": 675.854,
+            "mase": 1.9182,
+            "coverage": 0.4167,
+            "mean_width": 2259.2184
+          },
+          "4": {
+            "n": 12,
+            "mae": 1516.9946,
+            "bias": 622.8357,
+            "mase": 2.0865,
+            "coverage": 0.4167,
+            "mean_width": 1874.5311
+          },
+          "5": {
+            "n": 12,
+            "mae": 1642.7278,
+            "bias": 541.804,
+            "mase": 2.2594,
+            "coverage": 0.5,
+            "mean_width": 2745.6856
+          },
+          "6": {
+            "n": 12,
+            "mae": 1692.8222,
+            "bias": 674.3934,
+            "mase": 2.3283,
+            "coverage": 0.4167,
+            "mean_width": 2978.8359
+          },
+          "7": {
+            "n": 12,
+            "mae": 1786.5968,
+            "bias": 652.9441,
+            "mase": 2.4573,
+            "coverage": 0.6667,
+            "mean_width": 3266.7098
+          }
+        },
+        "by_series": {
+          "bike-rentals|total": {
+            "n": 84,
+            "mae": 1446.8111,
+            "bias": 602.4305,
+            "mase": 1.99,
+            "coverage": 0.5476,
+            "mean_width": 2627.1545
+          }
+        },
+        "stockout_weeks": {
+          "n": 0,
+          "mae": null,
+          "bias": null,
+          "mase": null,
+          "coverage": null,
+          "mean_width": null
+        }
+      },
+      "naive": {
+        "overall": {
+          "n": 84,
+          "mae": 1652.1429,
+          "bias": 181.2619,
+          "mase": 2.2724,
+          "coverage": 0.8333,
+          "mean_width": 5949.1015
+        },
+        "by_horizon": {
+          "1": {
+            "n": 12,
+            "mae": 1107.3333,
+            "bias": 157.8333,
+            "mase": 1.523,
+            "coverage": 0.8333,
+            "mean_width": 3847.7132
+          },
+          "2": {
+            "n": 12,
+            "mae": 1246.1667,
+            "bias": 194.3333,
+            "mase": 1.714,
+            "coverage": 0.75,
+            "mean_width": 4712.467
+          },
+          "3": {
+            "n": 12,
+            "mae": 1661.0,
+            "bias": 219.8333,
+            "mase": 2.2845,
+            "coverage": 0.6667,
+            "mean_width": 5441.4882
+          },
+          "4": {
+            "n": 12,
+            "mae": 1697.75,
+            "bias": 136.5833,
+            "mase": 2.3351,
+            "coverage": 0.6667,
+            "mean_width": 6083.7687
+          },
+          "5": {
+            "n": 12,
+            "mae": 1919.75,
+            "bias": 162.25,
+            "mase": 2.6404,
+            "coverage": 0.9167,
+            "mean_width": 6664.4347
+          },
+          "6": {
+            "n": 12,
+            "mae": 1895.8333,
+            "bias": 244.3333,
+            "mase": 2.6075,
+            "coverage": 1.0,
+            "mean_width": 7198.4122
+          },
+          "7": {
+            "n": 12,
+            "mae": 2037.1667,
+            "bias": 153.6667,
+            "mase": 2.8019,
+            "coverage": 1.0,
+            "mean_width": 7695.4263
+          }
+        },
+        "by_series": {
+          "bike-rentals|total": {
+            "n": 84,
+            "mae": 1652.1429,
+            "bias": 181.2619,
+            "mase": 2.2724,
+            "coverage": 0.8333,
+            "mean_width": 5949.1015
+          }
+        },
+        "stockout_weeks": {
+          "n": 0,
+          "mae": null,
+          "bias": null,
+          "mase": null,
+          "coverage": null,
+          "mean_width": null
+        }
+      },
+      "seasonal_naive_7": {
+        "overall": {
+          "n": 84,
+          "mae": 1649.1429,
+          "bias": 841.4286,
+          "mase": 2.2682,
+          "coverage": 0.4524,
+          "mean_width": 3520.0928
+        },
+        "by_horizon": {
+          "1": {
+            "n": 12,
+            "mae": 1544.5833,
+            "bias": 1287.9167,
+            "mase": 2.1244,
+            "coverage": 0.5,
+            "mean_width": 3323.434
+          },
+          "2": {
+            "n": 12,
+            "mae": 1529.5833,
+            "bias": 1253.9167,
+            "mase": 2.1038,
+            "coverage": 0.5,
+            "mean_width": 3323.434
+          },
+          "3": {
+            "n": 12,
+            "mae": 1695.5,
+            "bias": 936.8333,
+            "mase": 2.332,
+            "coverage": 0.4167,
+            "mean_width": 3323.434
+          },
+          "4": {
+            "n": 12,
+            "mae": 1660.0833,
+            "bias": 608.4167,
+            "mase": 2.2833,
+            "coverage": 0.4167,
+            "mean_width": 3323.434
+          },
+          "5": {
+            "n": 12,
+            "mae": 1838.75,
+            "bias": 301.4167,
+            "mase": 2.529,
+            "coverage": 0.3333,
+            "mean_width": 3323.434
+          },
+          "6": {
+            "n": 12,
+            "mae": 1895.8333,
+            "bias": 244.3333,
+            "mase": 2.6075,
+            "coverage": 0.25,
+            "mean_width": 3323.434
+          },
+          "7": {
+            "n": 12,
+            "mae": 1379.6667,
+            "bias": 1257.1667,
+            "mase": 1.8976,
+            "coverage": 0.75,
+            "mean_width": 4700.0455
+          }
+        },
+        "by_series": {
+          "bike-rentals|total": {
+            "n": 84,
+            "mae": 1649.1429,
+            "bias": 841.4286,
+            "mase": 2.2682,
+            "coverage": 0.4524,
+            "mean_width": 3520.0928
+          }
+        },
+        "stockout_weeks": {
+          "n": 0,
+          "mae": null,
+          "bias": null,
+          "mase": null,
+          "coverage": null,
+          "mean_width": null
+        }
+      }
+    }
+  },
+  "selection": {
+    "selected": "ets",
+    "reason": "MASE 1.8496 vs seasonal_naive_7 2.2682 (18.5% better)",
+    "frozen_sha256": "cad4a250ae9be7f0071924483102b1bf6e1e6b726ee9cc0d937f1a3f5d45f5ca",
+    "rule": {
+      "metric": "mase",
+      "population": "like_for_like",
+      "select": "lowest MASE among candidates that beat seasonal_naive_52 (or naive where it cannot run) by >= 5%",
+      "otherwise": "keep the best baseline",
+      "min_improvement": 0.05,
+      "holdout": "evaluated once, after the rule"
+    }
+  },
+  "intervals": {
+    "lgbm_lags": {
+      "method": "pooled_w10",
+      "status": "not_validated",
+      "summary": "Two frozen interval studies: for a nominal 80%, coverage was 80-84% on four weekly sets (three NordWerk realisations, UCI retail) but 58.0% on UCI Bike Sharing daily and 88.0% on four real daily German grid-load series (SMARD). The frozen rule needed 75-85% everywhere, so these ranges are NOT validated: read them as a rough indication. Nothing in planning uses them.",
+      "evidence": "docs/forecast/evidence/intervals/test.json, docs/forecast/evidence/intervals-2/test.json"
+    },
+    "baselines": {
+      "method": "StatsForecast model intervals",
+      "status": "not_validated",
+      "summary": "The baselines' own intervals over-cover (91-99% in evaluation) and are wide."
+    }
+  },
+  "holdout": {
+    "population": {
+      "points": 28,
+      "series": [
+        "bike-rentals|total"
+      ]
+    },
+    "comparable": {
+      "ets": {
+        "n": 28,
+        "mae": 1347.145,
+        "bias": 902.9231,
+        "mase": 1.8529,
+        "coverage": 0.6429,
+        "mean_width": 2847.3014
+      },
+      "naive": {
+        "n": 28,
+        "mae": 1271.1786,
+        "bias": -481.75,
+        "mase": 1.7484,
+        "coverage": 0.9286,
+        "mean_width": 5971.9504
+      },
+      "seasonal_naive_7": {
+        "n": 28,
+        "mae": 1356.1429,
+        "bias": 997.2143,
+        "mase": 1.8652,
+        "coverage": 0.7143,
+        "mean_width": 3565.0299
+      }
+    }
+  },
+  "skipped": [],
+  "note": "Intervals: statistical models' own; LightGBM conformal from training windows. Negative interval bounds are reported as produced (not clipped). Promotion requires a person's approval."
+}

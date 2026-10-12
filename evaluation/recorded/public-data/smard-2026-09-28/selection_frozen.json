@@ -1,0 +1,61 @@
+{
+ "rule": {
+  "metric": "mase",
+  "population": "like_for_like",
+  "select": "lowest MASE among candidates that beat seasonal_naive_52 (or naive where it cannot run) by >= 5%",
+  "otherwise": "keep the best baseline",
+  "min_improvement": 0.05,
+  "holdout": "evaluated once, after the rule"
+ },
+ "cv_comparable": {
+  "ets": {
+   "n": 84,
+   "mae": 74399.6586,
+   "bias": 21142.3308,
+   "mase": 0.8186,
+   "coverage": 0.8571,
+   "mean_width": 303310.8153
+  },
+  "lgbm_lags": {
+   "n": 84,
+   "mae": 38908.2175,
+   "bias": 33439.3005,
+   "mase": 0.4281,
+   "coverage": 0.6429,
+   "mean_width": 106252.3318
+  },
+  "naive": {
+   "n": 84,
+   "mae": 90601.95,
+   "bias": 10411.8771,
+   "mase": 0.9969,
+   "coverage": 1.0,
+   "mean_width": 722526.7541
+  },
+  "seasonal_naive_7": {
+   "n": 84,
+   "mae": 38545.164,
+   "bias": 6812.9217,
+   "mase": 0.4241,
+   "coverage": 1.0,
+   "mean_width": 237448.7534
+  }
+ },
+ "decision": {
+  "selected": "seasonal_naive_7",
+  "reason": "no candidate beat seasonal_naive_7 (MASE 0.4241) by 5%: the baseline stays"
+ },
+ "lgbm_params": {
+  "n_estimators": 200,
+  "learning_rate": 0.05,
+  "num_leaves": 15,
+  "min_child_samples": 10,
+  "subsample": 1.0,
+  "colsample_bytree": 1.0,
+  "random_state": 0,
+  "n_jobs": 1,
+  "verbose": -1
+ },
+ "sha256": "fb96feaa8a06e8fe1c75b7393121132035db6fb57e35cc166c3047357107dad1"
+}
+

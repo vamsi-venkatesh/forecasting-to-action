@@ -1,0 +1,78 @@
+{
+  "profile_version": "profile-2",
+  "inputs": {
+    "sales_daily.csv": "d1239a07ee8899627b53d83ed2b6222a177e5758b2a99ebd480475588008ed46"
+  },
+  "date_column": "period_start",
+  "frequency": "daily",
+  "measured_step_days": 1,
+  "target_candidates": [
+    "rentals"
+  ],
+  "inputs_sha256": "98e2d4f3634c00f5c63afdc97e2a9339a5d82fb4c09121e5a59fae299dd7009c",
+  "files": [
+    {
+      "file": "sales_daily.csv",
+      "rows": 731,
+      "columns": [
+        "series_id",
+        "period_start",
+        "available_at",
+        "rentals",
+        "unit"
+      ],
+      "quantity_column": null
+    }
+  ],
+  "renamed_columns": [],
+  "duplicate_keys": [],
+  "unparsed_rows": 0,
+  "units": {
+    "rentals": 731
+  },
+  "last_week": "2012-12-31",
+  "series_count": 1,
+  "series_short_for_52w_seasonality": [],
+  "series": [
+    {
+      "series_id": "bike-rentals|total",
+      "first_week": "2011-01-01",
+      "last_week": "2012-12-31",
+      "observed_weeks": 731,
+      "expected_weeks": 731,
+      "missing_weeks": [],
+      "zero_weeks": 0,
+      "stockout_weeks": [],
+      "returned_units": 0,
+      "sold_units": 0,
+      "mean_weekly": null,
+      "history_ok_for_52w_seasonality": true,
+      "history_ok_for_seasonality": true
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q-mapping",
+      "blocks": [
+        "prepare",
+        "train"
+      ],
+      "question": "Confirm what to forecast. The profile SUGGESTS a mapping below; nothing trains until a person confirms it.",
+      "evidence": {
+        "suggested": {
+          "target": "rentals",
+          "date": "period_start",
+          "series": "series_id",
+          "frequency": "daily",
+          "unit": "rentals"
+        },
+        "target_candidates": [
+          "rentals"
+        ],
+        "measured_step_days": 1,
+        "ambiguous": false,
+        "missing_periods": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+ "benchmark": "smard-de-consumption-daily-1",
+ "source": "https://www.smard.de (chart data 410, DE, day)",
+ "licence": "CC BY 4.0",
+ "attribution": "Bundesnetzagentur | SMARD.de",
+ "retrieved_at": "2026-09-28T21:12:48+00:00",
+ "raw_sha256": "f75d466c8f0d7558d2631a3b5901f2a409288f17a1a13d77c323f45f375a537e",
+ "target": "consumption_mwh: total electricity consumption (grid load) per day, MWh",
+ "frequency": "daily",
+ "calendar": "Europe/Berlin calendar days; clock-change days have 23 or 25 hours, kept as published",
+ "coverage": {
+  "first_day": "2019-01-01",
+  "last_day": "2026-09-27",
+  "days": 2827,
+  "missing_days": []
+ },
+ "assumptions": {
+  "available_at": "a day's value is known at 12:00 UTC the next day (the source gives no publication time)",
+  "revisions": "recent days may be revised by the source; each retrieval is a version (raw_sha256)"
+ },
+ "lag_at_retrieval_days": 1,
+ "not_used": "no weather, prices or holidays: only the series' own history",
+ "files": {
+  "sales_daily.csv": "d6a767ded879cf779191cc4d710bb45c0329b4e8f0504568fca9d5338160522a"
+ }
+}
+

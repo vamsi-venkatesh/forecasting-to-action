@@ -1,0 +1,57 @@
+{
+  "dataset": "uci-retail-visitor-subset",
+  "wall_seconds": 11.5,
+  "summary": {
+    "reason": "MASE 0.7325 vs naive 0.8416 (13.0% better)",
+    "origins": 12,
+    "selected": "ets",
+    "peak_rss_mb": 192.4,
+    "cv_comparable": {
+      "ets": {
+        "n": 384,
+        "mae": 284.8004,
+        "bias": 68.3502,
+        "mase": 0.7325,
+        "coverage": 0.8724,
+        "mean_width": 1355.3645
+      },
+      "naive": {
+        "n": 384,
+        "mae": 311.5052,
+        "bias": -4.7969,
+        "mase": 0.8416,
+        "coverage": 0.9818,
+        "mean_width": 3302.7758
+      },
+      "lgbm_lags": {
+        "n": 384,
+        "mae": 394.9388,
+        "bias": 184.8829,
+        "mase": 1.0761,
+        "coverage": 0.7396,
+        "mean_width": 1210.9621
+      }
+    },
+    "frozen_sha256": "09ebd01861cff5ba44b17c22fa525a14ad6e3ba53b21a00330dc94d0a30daaad",
+    "worker_version": "forecast-worker-1",
+    "holdout_comparable": {
+      "ets": {
+        "n": 64,
+        "mae": 221.2259,
+        "bias": 24.311,
+        "mase": 0.5745,
+        "coverage": 0.9219,
+        "mean_width": 1313.2148
+      },
+      "naive": {
+        "n": 64,
+        "mae": 309.4531,
+        "bias": 13.4219,
+        "mase": 0.6973,
+        "coverage": 0.9844,
+        "mean_width": 3196.8997
+      }
+    }
+  },
+  "review_redaction": "Internal project, job and correlation IDs removed; scientific values preserved."
+}

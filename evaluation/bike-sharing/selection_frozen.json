@@ -1,0 +1,60 @@
+{
+  "rule": {
+    "metric": "mase",
+    "population": "like_for_like",
+    "select": "lowest MASE among candidates that beat seasonal_naive_52 (or naive where it cannot run) by >= 5%",
+    "otherwise": "keep the best baseline",
+    "min_improvement": 0.05,
+    "holdout": "evaluated once, after the rule"
+  },
+  "cv_comparable": {
+    "ets": {
+      "n": 84,
+      "mae": 1344.7884,
+      "bias": 952.2984,
+      "mase": 1.8496,
+      "coverage": 0.619,
+      "mean_width": 3154.4284
+    },
+    "lgbm_lags": {
+      "n": 84,
+      "mae": 1446.8111,
+      "bias": 602.4305,
+      "mase": 1.99,
+      "coverage": 0.5476,
+      "mean_width": 2627.1545
+    },
+    "naive": {
+      "n": 84,
+      "mae": 1652.1429,
+      "bias": 181.2619,
+      "mase": 2.2724,
+      "coverage": 0.8333,
+      "mean_width": 5949.1015
+    },
+    "seasonal_naive_7": {
+      "n": 84,
+      "mae": 1649.1429,
+      "bias": 841.4286,
+      "mase": 2.2682,
+      "coverage": 0.4524,
+      "mean_width": 3520.0928
+    }
+  },
+  "decision": {
+    "selected": "ets",
+    "reason": "MASE 1.8496 vs seasonal_naive_7 2.2682 (18.5% better)"
+  },
+  "lgbm_params": {
+    "n_estimators": 200,
+    "learning_rate": 0.05,
+    "num_leaves": 15,
+    "min_child_samples": 10,
+    "subsample": 1.0,
+    "colsample_bytree": 1.0,
+    "random_state": 0,
+    "n_jobs": 1,
+    "verbose": -1
+  },
+  "sha256": "cad4a250ae9be7f0071924483102b1bf6e1e6b726ee9cc0d937f1a3f5d45f5ca"
+}

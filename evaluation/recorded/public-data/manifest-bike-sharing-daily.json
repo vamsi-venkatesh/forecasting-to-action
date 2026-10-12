@@ -1,0 +1,34 @@
+{
+ "benchmark": "uci-bike-sharing-daily-1",
+ "source": "https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset",
+ "citation": "Fanaee-T, H. (2013). Bike Sharing. UCI Machine Learning Repository. https://doi.org/10.24432/C5W894",
+ "licence": "CC BY 4.0",
+ "zip_sha256": "b70182d0d0508e9abbb79306ce5c0cec34869000f8220175ac83d11dbe845401",
+ "file_used": "day.csv",
+ "coverage": {
+  "first_day": "2011-01-01",
+  "last_day": "2012-12-31",
+  "days": 731,
+  "expected_days": 731,
+  "gaps": 0
+ },
+ "target": "cnt: total rentals per day (casual + registered)",
+ "frequency": "daily",
+ "not_used": {
+  "casual, registered": "components of the same-day target",
+  "temp, atemp, hum, windspeed, weathersit": "observed on the day; not known when forecasting",
+  "season, yr, mnth, holiday, weekday, workingday": "derivable from the date; not used by the default models"
+ },
+ "excluded_rows": [],
+ "assumptions": {
+  "available_at": "next day 06:00 UTC (one-day lag); the source has no arrival time"
+ },
+ "replay": "historical replay of 2011-2012; not a current forecast; no stock, purchasing or actions",
+ "files": {
+  "sales_daily.csv": {
+   "rows": 731,
+   "sha256": "d1239a07ee8899627b53d83ed2b6222a177e5758b2a99ebd480475588008ed46"
+  }
+ }
+}
+

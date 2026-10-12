@@ -1,0 +1,15 @@
+{
+  "fixture": "explicitly synthetic adversarial inputs",
+  "pre_split_interpolation": {
+    "input_before_future_change": 15.0,
+    "input_after_future_change": 105.0,
+    "future_influences_past": true
+  },
+  "late_row_issue_filter": {
+    "forecast_before_late_value_change": 23.111605,
+    "forecast_after_late_value_change": 2093.511804,
+    "unavailable_historical_row_influences_issue": true
+  },
+  "source_modified": false,
+  "scope": "These checks demonstrate failure cases; they do not quantify bias in every historical benchmark."
+}

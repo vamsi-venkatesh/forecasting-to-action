@@ -1,0 +1,484 @@
+{
+ "population": {
+  "origins": [
+   "2026-08-11",
+   "2026-08-12",
+   "2026-08-13",
+   "2026-08-14",
+   "2026-08-15",
+   "2026-08-16",
+   "2026-08-17",
+   "2026-08-18",
+   "2026-08-19",
+   "2026-08-20",
+   "2026-08-21",
+   "2026-08-22"
+  ],
+  "holdout_from": "2026-08-31",
+  "holdout_origins": [
+   "2026-08-29",
+   "2026-09-05",
+   "2026-09-12",
+   "2026-09-19"
+  ],
+  "series": [
+   "DE|electricity consumption"
+  ],
+  "horizon_weeks": 7,
+  "gap_weeks": 1,
+  "interval_level": 80,
+  "missing_policy": "missing",
+  "quantity_columns": {
+   "consumption_mwh": "target"
+  },
+  "imputed_weeks": 0,
+  "stockout_weeks": 0,
+  "measured_lag_days": 0.5,
+  "measured_gap": 1,
+  "frequency": "daily",
+  "interval_method": "pooled_w10"
+ },
+ "cross_validation": {
+  "comparable_population": {
+   "points": 84,
+   "series": [
+    "DE|electricity consumption"
+   ]
+  },
+  "comparable": {
+   "ets": {
+    "n": 84,
+    "mae": 74399.6586,
+    "bias": 21142.3308,
+    "mase": 0.8186,
+    "coverage": 0.8571,
+    "mean_width": 303310.8153
+   },
+   "lgbm_lags": {
+    "n": 84,
+    "mae": 38908.2175,
+    "bias": 33439.3005,
+    "mase": 0.4281,
+    "coverage": 0.6429,
+    "mean_width": 106252.3318
+   },
+   "naive": {
+    "n": 84,
+    "mae": 90601.95,
+    "bias": 10411.8771,
+    "mase": 0.9969,
+    "coverage": 1.0,
+    "mean_width": 722526.7541
+   },
+   "seasonal_naive_7": {
+    "n": 84,
+    "mae": 38545.164,
+    "bias": 6812.9217,
+    "mase": 0.4241,
+    "coverage": 1.0,
+    "mean_width": 237448.7534
+   }
+  },
+  "per_model": {
+   "ets": {
+    "overall": {
+     "n": 84,
+     "mae": 74399.6586,
+     "bias": 21142.3308,
+     "mase": 0.8186,
+     "coverage": 0.8571,
+     "mean_width": 303310.8153
+    },
+    "by_horizon": {
+     "1": {
+      "n": 12,
+      "mae": 73665.3399,
+      "bias": 34212.1835,
+      "mase": 0.8105,
+      "coverage": 0.75,
+      "mean_width": 296530.2524
+     },
+     "2": {
+      "n": 12,
+      "mae": 73794.2833,
+      "bias": 32426.8406,
+      "mase": 0.8119,
+      "coverage": 0.8333,
+      "mean_width": 298815.5184
+     },
+     "3": {
+      "n": 12,
+      "mae": 75183.7689,
+      "bias": 27763.9569,
+      "mase": 0.8272,
+      "coverage": 0.9167,
+      "mean_width": 301085.7458
+     },
+     "4": {
+      "n": 12,
+      "mae": 70491.7461,
+      "bias": 13858.4293,
+      "mase": 0.7756,
+      "coverage": 0.9167,
+      "mean_width": 303340.884
+     },
+     "5": {
+      "n": 12,
+      "mae": 64287.2614,
+      "bias": -2550.261,
+      "mase": 0.7073,
+      "coverage": 0.9167,
+      "mean_width": 305580.9584
+     },
+     "6": {
+      "n": 12,
+      "mae": 73515.35,
+      "bias": 10453.3808,
+      "mase": 0.8089,
+      "coverage": 0.9167,
+      "mean_width": 307806.0529
+     },
+     "7": {
+      "n": 12,
+      "mae": 89859.8607,
+      "bias": 31831.7853,
+      "mase": 0.9887,
+      "coverage": 0.75,
+      "mean_width": 310016.2951
+     }
+    },
+    "by_series": {
+     "DE|electricity consumption": {
+      "n": 84,
+      "mae": 74399.6586,
+      "bias": 21142.3308,
+      "mase": 0.8186,
+      "coverage": 0.8571,
+      "mean_width": 303310.8153
+     }
+    },
+    "stockout_weeks": {
+     "n": 0,
+     "mae": null,
+     "bias": null,
+     "mase": null,
+     "coverage": null,
+     "mean_width": null
+    }
+   },
+   "lgbm_lags": {
+    "overall": {
+     "n": 84,
+     "mae": 38908.2175,
+     "bias": 33439.3005,
+     "mase": 0.4281,
+     "coverage": 0.6429,
+     "mean_width": 106252.3318
+    },
+    "by_horizon": {
+     "1": {
+      "n": 12,
+      "mae": 44212.6533,
+      "bias": 31521.5353,
+      "mase": 0.4865,
+      "coverage": 0.4167,
+      "mean_width": 82053.2121
+     },
+     "2": {
+      "n": 12,
+      "mae": 38651.3795,
+      "bias": 31911.3355,
+      "mase": 0.4253,
+      "coverage": 0.6667,
+      "mean_width": 102300.2877
+     },
+     "3": {
+      "n": 12,
+      "mae": 42527.5916,
+      "bias": 31812.0217,
+      "mase": 0.4679,
+      "coverage": 0.9167,
+      "mean_width": 128743.1817
+     },
+     "4": {
+      "n": 12,
+      "mae": 40827.2181,
+      "bias": 33894.1341,
+      "mase": 0.4492,
+      "coverage": 0.5833,
+      "mean_width": 112341.3587
+     },
+     "5": {
+      "n": 12,
+      "mae": 35142.3597,
+      "bias": 35142.3597,
+      "mase": 0.3867,
+      "coverage": 0.5,
+      "mean_width": 88271.8525
+     },
+     "6": {
+      "n": 12,
+      "mae": 34964.2674,
+      "bias": 34964.2674,
+      "mase": 0.3847,
+      "coverage": 0.75,
+      "mean_width": 112864.7761
+     },
+     "7": {
+      "n": 12,
+      "mae": 36032.0527,
+      "bias": 34829.45,
+      "mase": 0.3965,
+      "coverage": 0.6667,
+      "mean_width": 117191.6539
+     }
+    },
+    "by_series": {
+     "DE|electricity consumption": {
+      "n": 84,
+      "mae": 38908.2175,
+      "bias": 33439.3005,
+      "mase": 0.4281,
+      "coverage": 0.6429,
+      "mean_width": 106252.3318
+     }
+    },
+    "stockout_weeks": {
+     "n": 0,
+     "mae": null,
+     "bias": null,
+     "mase": null,
+     "coverage": null,
+     "mean_width": null
+    }
+   },
+   "naive": {
+    "overall": {
+     "n": 84,
+     "mae": 90601.95,
+     "bias": 10411.8771,
+     "mase": 0.9969,
+     "coverage": 1.0,
+     "mean_width": 722526.7541
+    },
+    "by_horizon": {
+     "1": {
+      "n": 12,
+      "mae": 105663.7042,
+      "bias": 23470.8025,
+      "mase": 1.1626,
+      "coverage": 1.0,
+      "mean_width": 467310.1854
+     },
+     "2": {
+      "n": 12,
+      "mae": 114943.9858,
+      "bias": 21690.4775,
+      "mase": 1.2647,
+      "coverage": 1.0,
+      "mean_width": 572335.7529
+     },
+     "3": {
+      "n": 12,
+      "mae": 119602.855,
+      "bias": 17031.6083,
+      "mase": 1.316,
+      "coverage": 1.0,
+      "mean_width": 660876.402
+     },
+     "4": {
+      "n": 12,
+      "mae": 109491.1842,
+      "bias": 3129.2925,
+      "mase": 1.2047,
+      "coverage": 1.0,
+      "mean_width": 738882.2798
+     },
+     "5": {
+      "n": 12,
+      "mae": 70903.0583,
+      "bias": -13276.8283,
+      "mase": 0.7801,
+      "coverage": 1.0,
+      "mean_width": 809404.984
+     },
+     "6": {
+      "n": 12,
+      "mae": 41288.9492,
+      "bias": -271.1308,
+      "mase": 0.4543,
+      "coverage": 1.0,
+      "mean_width": 874257.3035
+     },
+     "7": {
+      "n": 12,
+      "mae": 72319.9133,
+      "bias": 21108.9183,
+      "mase": 0.7957,
+      "coverage": 1.0,
+      "mean_width": 934620.3708
+     }
+    },
+    "by_series": {
+     "DE|electricity consumption": {
+      "n": 84,
+      "mae": 90601.95,
+      "bias": 10411.8771,
+      "mase": 0.9969,
+      "coverage": 1.0,
+      "mean_width": 722526.7541
+     }
+    },
+    "stockout_weeks": {
+     "n": 0,
+     "mae": null,
+     "bias": null,
+     "mase": null,
+     "coverage": null,
+     "mean_width": null
+    }
+   },
+   "seasonal_naive_7": {
+    "overall": {
+     "n": 84,
+     "mae": 38545.164,
+     "bias": 6812.9217,
+     "mase": 0.4241,
+     "coverage": 1.0,
+     "mean_width": 237448.7534
+    },
+    "by_horizon": {
+     "1": {
+      "n": 12,
+      "mae": 37604.8392,
+      "bias": 11287.9608,
+      "mase": 0.4138,
+      "coverage": 1.0,
+      "mean_width": 224183.0856
+     },
+     "2": {
+      "n": 12,
+      "mae": 35177.2525,
+      "bias": 8257.4458,
+      "mase": 0.387,
+      "coverage": 1.0,
+      "mean_width": 224183.0856
+     },
+     "3": {
+      "n": 12,
+      "mae": 36607.2475,
+      "bias": 6827.4508,
+      "mase": 0.4028,
+      "coverage": 1.0,
+      "mean_width": 224183.0856
+     },
+     "4": {
+      "n": 12,
+      "mae": 39115.795,
+      "bias": 4318.9033,
+      "mase": 0.4304,
+      "coverage": 1.0,
+      "mean_width": 224183.0856
+     },
+     "5": {
+      "n": 12,
+      "mae": 41021.2575,
+      "bias": 2413.4408,
+      "mase": 0.4513,
+      "coverage": 1.0,
+      "mean_width": 224183.0856
+     },
+     "6": {
+      "n": 12,
+      "mae": 41288.9492,
+      "bias": -271.1308,
+      "mase": 0.4543,
+      "coverage": 1.0,
+      "mean_width": 224183.0856
+     },
+     "7": {
+      "n": 12,
+      "mae": 39000.8075,
+      "bias": 14856.3808,
+      "mase": 0.4291,
+      "coverage": 1.0,
+      "mean_width": 317042.7601
+     }
+    },
+    "by_series": {
+     "DE|electricity consumption": {
+      "n": 84,
+      "mae": 38545.164,
+      "bias": 6812.9217,
+      "mase": 0.4241,
+      "coverage": 1.0,
+      "mean_width": 237448.7534
+     }
+    },
+    "stockout_weeks": {
+     "n": 0,
+     "mae": null,
+     "bias": null,
+     "mase": null,
+     "coverage": null,
+     "mean_width": null
+    }
+   }
+  }
+ },
+ "selection": {
+  "selected": "seasonal_naive_7",
+  "reason": "no candidate beat seasonal_naive_7 (MASE 0.4241) by 5%: the baseline stays",
+  "frozen_sha256": "fb96feaa8a06e8fe1c75b7393121132035db6fb57e35cc166c3047357107dad1",
+  "rule": {
+   "metric": "mase",
+   "population": "like_for_like",
+   "select": "lowest MASE among candidates that beat seasonal_naive_52 (or naive where it cannot run) by >= 5%",
+   "otherwise": "keep the best baseline",
+   "min_improvement": 0.05,
+   "holdout": "evaluated once, after the rule"
+  }
+ },
+ "intervals": {
+  "lgbm_lags": {
+   "method": "pooled_w10",
+   "status": "not_validated",
+   "summary": "Interval study 1 (rules frozen before results): 82.0% coverage on a fresh NordWerk realisation but 58.0% on UCI Bike Sharing daily, for a nominal 80%. The frozen rule needed 75-85% on both, so these ranges are NOT validated: read them as a rough indication. Nothing in planning uses them.",
+   "evidence": "docs/forecast/evidence/intervals/test.json"
+  },
+  "baselines": {
+   "method": "StatsForecast model intervals",
+   "status": "not_validated",
+   "summary": "The baselines' own intervals over-cover (91-99% in evaluation) and are wide."
+  }
+ },
+ "holdout": {
+  "population": {
+   "points": 28,
+   "series": [
+    "DE|electricity consumption"
+   ]
+  },
+  "comparable": {
+   "naive": {
+    "n": 28,
+    "mae": 156014.3668,
+    "bias": -142728.8196,
+    "mase": 1.7166,
+    "coverage": 1.0,
+    "mean_width": 721849.4941
+   },
+   "seasonal_naive_7": {
+    "n": 28,
+    "mae": 35246.645,
+    "bias": -19465.7636,
+    "mase": 0.3878,
+    "coverage": 1.0,
+    "mean_width": 236714.6326
+   }
+  }
+ },
+ "skipped": [],
+ "note": "Intervals: statistical models' own; LightGBM conformal from training windows. Negative interval bounds are reported as produced (not clipped). Promotion requires a person's approval."
+}
+

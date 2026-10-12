@@ -1,0 +1,73 @@
+{
+  "dataset": "bike-sharing-daily",
+  "wall_seconds": 11.4,
+  "summary": {
+    "reason": "MASE 1.8496 vs seasonal_naive_7 2.2682 (18.5% better)",
+    "origins": 12,
+    "selected": "ets",
+    "peak_rss_mb": 211.5,
+    "cv_comparable": {
+      "ets": {
+        "n": 84,
+        "mae": 1344.7884,
+        "bias": 952.2984,
+        "mase": 1.8496,
+        "coverage": 0.619,
+        "mean_width": 3154.4284
+      },
+      "naive": {
+        "n": 84,
+        "mae": 1652.1429,
+        "bias": 181.2619,
+        "mase": 2.2724,
+        "coverage": 0.8333,
+        "mean_width": 5949.1015
+      },
+      "lgbm_lags": {
+        "n": 84,
+        "mae": 1446.8111,
+        "bias": 602.4305,
+        "mase": 1.99,
+        "coverage": 0.5476,
+        "mean_width": 2627.1545
+      },
+      "seasonal_naive_7": {
+        "n": 84,
+        "mae": 1649.1429,
+        "bias": 841.4286,
+        "mase": 2.2682,
+        "coverage": 0.4524,
+        "mean_width": 3520.0928
+      }
+    },
+    "frozen_sha256": "cad4a250ae9be7f0071924483102b1bf6e1e6b726ee9cc0d937f1a3f5d45f5ca",
+    "worker_version": "forecast-worker-1",
+    "holdout_comparable": {
+      "ets": {
+        "n": 28,
+        "mae": 1347.145,
+        "bias": 902.9231,
+        "mase": 1.8529,
+        "coverage": 0.6429,
+        "mean_width": 2847.3014
+      },
+      "naive": {
+        "n": 28,
+        "mae": 1271.1786,
+        "bias": -481.75,
+        "mase": 1.7484,
+        "coverage": 0.9286,
+        "mean_width": 5971.9504
+      },
+      "seasonal_naive_7": {
+        "n": 28,
+        "mae": 1356.1429,
+        "bias": 997.2143,
+        "mase": 1.8652,
+        "coverage": 0.7143,
+        "mean_width": 3565.0299
+      }
+    }
+  },
+  "review_redaction": "Internal project, job and correlation IDs removed; scientific values preserved."
+}

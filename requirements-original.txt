@@ -1,0 +1,13 @@
+# Forecasting worker environment (ADR-001). Separate from the engine's requirements-control-plane.txt:
+# the engine never imports these. Versions verified installed together on Python 3.12, 2026-09-28.
+# Licences: StatsForecast/MLForecast/utilsforecast/coreforecast Apache-2.0, LightGBM MIT, pandas/scikit-learn BSD-3, pyarrow Apache-2.0.
+statsforecast==2.1.1
+mlforecast==1.1.0
+lightgbm==4.7.0
+pandas==2.3.3
+numpy==2.5.3
+pyarrow==25.0.1
+scikit-learn==1.9.1
+openpyxl==3.1.5          # MIT; reads the UCI .xlsx with cached values only (no formulas or macros run)
+pytest>=9.0.3,<10
+

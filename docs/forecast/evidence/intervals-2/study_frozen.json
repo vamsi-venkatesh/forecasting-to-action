@@ -1,0 +1,33 @@
+{
+ "study": {
+  "version": "interval-study-2",
+  "level": 80,
+  "methods": [
+   "pooled_w10",
+   "pooled_w20",
+   "spread_y1"
+  ],
+  "method_notes": {
+   "pooled_w10": "the current method (study 1's choice): 10 consecutive calibration origins",
+   "pooled_w20": "20 consecutive calibration origins",
+   "spread_y1": "calibration origins spread over the last year: weekly 26 origins 2 weeks apart, daily 52 origins 7 days apart (hypothesis from study 1: consecutive daily origins give one series too few, too similar scores)"
+  },
+  "development": {
+   "nordwerk_a": "NordWerk seed 20260928: cross-validation origins only (as study 1)",
+   "uci_retail": "UCI Online Retail II weekly, 50 products: cross-validation origins only (as study 1)",
+   "nordwerk_b": "NordWerk seed 20261015 (study 1's test set, now seen): cross-validation and holdout origins",
+   "bike_daily": "UCI Bike Sharing daily (study 1's test set, now seen): cross-validation and holdout origins"
+  },
+  "test": {
+   "nordwerk_c": "a NEW NordWerk realisation, seed 20261101 (synthetic, weekly): all origins",
+   "smard_areas": "SMARD daily electricity consumption (grid load) of the four German control areas 50Hertz, Amprion, TenneT, TransnetBW, 2019-01-01 to the last published day at retrieval (real, CC BY 4.0, Bundesnetzagentur | SMARD.de): all origins; no interval study has used these series"
+  },
+  "selection": "among methods whose development coverage is within 0.75..0.85 on ALL FOUR development datasets, the lowest mean scaled interval score (mean over the four); if none qualifies, the method with the most development datasets inside 0.75..0.85 (ties: lowest mean scaled interval score) is tested, and can at best be reported, not validated",
+  "validation": "the selected method is 'validated on these datasets' only if it qualified on development AND its test coverage is within 0.75..0.85 on BOTH test datasets; otherwise ranges stay labelled not validated and nothing may rely on them",
+  "reported": "per dataset and method: points n, series, origins, empirical coverage, mean scaled width, mean scaled interval score (alpha 0.2, study 1's definition), coverage by horizon",
+  "not_allowed": "no change of rules, methods, datasets or thresholds after seeing development or test results"
+ },
+ "sha256": "61f5bdb354d2d099dd8a3cfae1781d728f1f16f1bee1bedfebee4c120089cb12",
+ "frozen_at": "2026-09-28T21:54:26.472132+00:00"
+}
+

@@ -1,0 +1,61 @@
+{
+ "benchmark": "uci-online-retail-ii-weekly-2",
+ "source": "UCI Online Retail II (Chen 2012), doi:10.24432/C5CG6D",
+ "licence": "CC BY 4.0",
+ "zip_sha256": "572e36277c2390fbfde10664750731e0a86f55e33470d91919085f0408e67bfb",
+ "first_transaction": "2009-12-01T07:45:00",
+ "last_transaction": "2011-12-09T12:50:00",
+ "last_complete_week": "2011-11-28",
+ "weeks": 104,
+ "series": 50,
+ "selection": "top 50 product codes by gross units sold (all countries) in the weeks 2009-12-07 .. 2011-06-13 only (before the first evaluation origin): later sales and survival into the test period play no part",
+ "target": "net units per week = units sold minus units on cancellation invoices, netted into the week of the cancellation (the source rarely links a cancellation to its sale)",
+ "first_complete_week": "2009-12-07",
+ "selection_until": "2011-06-13",
+ "series_start": "each series starts at its first week with sales; earlier weeks are absent, not zero",
+ "currency": "GBP (retail selling prices; not used here and never relabelled EUR)",
+ "counts": {
+  "rows": 1067371,
+  "sale_lines": 1005909,
+  "cancellation_lines": 17914,
+  "negative_non_cancellation_lines_excluded": 3392,
+  "duplicate_lines_across_or_within_sheets": 34335
+ },
+ "excluded_non_product_codes": {
+  "POST": 2086,
+  "DOT": 1425,
+  "M": 1387,
+  "C2": 277,
+  "D": 173,
+  "S": 101,
+  "BANK CHARGES": 100,
+  "ADJUST": 67,
+  "AMAZONFEE": 36,
+  "gift_0001_20": 29,
+  "gift_0001_30": 29,
+  "PADS": 19,
+  "gift_0001_10": 16,
+  "CRUK": 16,
+  "TEST001": 15,
+  "gift_0001_50": 8,
+  "gift_0001_40": 7,
+  "B": 6,
+  "m": 5,
+  "gift_0001_80": 4
+ },
+ "not_in_data": [
+  "stock levels",
+  "receipts",
+  "promotions",
+  "availability",
+  "stockouts"
+ ],
+ "assumptions": [
+  "exact duplicate lines (all eight fields equal) are counted once: the two sheets overlap in December 2010 and the source also repeats some lines within a sheet; a genuinely repeated identical purchase would be undercounted by this choice",
+  "available_at = week start + 7 days (the source has no availability time)",
+  "cancellations netted into the week they occur",
+  "weeks with no line = 0 units (a transaction log records every sale, so an empty week is no sales, not missing)"
+ ],
+ "output_sha256": "f3e2bdff157a072c847f7c4a7f9c63f2f0653562e39e023126a7016f63fd54a6"
+}
+
